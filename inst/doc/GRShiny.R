@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   eval = T,
   collapse = TRUE,
@@ -35,5 +35,5 @@ infoPlot(grm.fit, 1)
 FSplot(grm.fit)
 
 ## ----eval = F-----------------------------------------------------------------
-#  startGRshiny()
+# startGRshiny()
 

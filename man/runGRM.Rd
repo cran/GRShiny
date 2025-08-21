@@ -9,21 +9,21 @@ runGRM(dat, lav.syntax, estimator)
 \arguments{
 \item{dat}{a data frame containing graded response model data}
 
-\item{lav.syntax}{a character indicating \code{\link{lavaan}} syntax}
+\item{lav.syntax}{a character indicating \pkg{lavaan} syntax}
 
 \item{estimator}{a character indicating the type of estimator.
 \itemize{
-\item{\code{ML}} Maximum likelihood estimation
-\item{\code{WL}} Weighted least squares mean and variance
+  \item \code{"ML"} Maximum likelihood estimation.
+  \item \code{"WL"} Weighted least squares mean and variance (WLSMV).
 }}
 }
 \value{
 a list containing GRM results as follows:
-\itemize{
-  \item{\code{fit}} an object from either \code{\linkS4class{SingleGroupClass}}
-   from \code{\link{mirt}} or code{\linkS4class{lavaan}} from from
-    \code{\link{lavaan}}.
-  \item{\code{grm.par}} a data frame indicating graded response parameters.
+\describe{
+  \item{\code{fit}}{An object of class
+    \link[mirt:SingleGroupClass-class]{SingleGroupClass} (from \pkg{mirt})
+    or \link[lavaan:lavaan-class]{lavaan} (from \pkg{lavaan}).}
+  \item{\code{grm.par}}{A data frame containing graded response parameters.}
 }
 }
 \description{

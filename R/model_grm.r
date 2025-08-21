@@ -4,19 +4,19 @@ NULL
 #' Run graded response model
 #'
 #' @param dat a data frame containing graded response model data
-#' @param lav.syntax a character indicating \code{\link{lavaan}} syntax
+#' @param lav.syntax a character indicating \pkg{lavaan} syntax
 #' @param estimator a character indicating the type of estimator.
 #' \itemize{
-#' \item{\code{ML}} Maximum likelihood estimation
-#' \item{\code{WL}} Weighted least squares mean and variance
+#'   \item \code{"ML"} Maximum likelihood estimation.
+#'   \item \code{"WL"} Weighted least squares mean and variance (WLSMV).
 #' }
 #'
 #' @return a list containing GRM results as follows:
-#' \itemize{
-#'   \item{\code{fit}} an object from either \code{\linkS4class{SingleGroupClass}}
-#'    from \code{\link{mirt}} or code{\linkS4class{lavaan}} from from
-#'     \code{\link{lavaan}}.
-#'   \item{\code{grm.par}} a data frame indicating graded response parameters.
+#' \describe{
+#'   \item{\code{fit}}{An object of class
+#'     \link[mirt:SingleGroupClass-class]{SingleGroupClass} (from \pkg{mirt})
+#'     or \link[lavaan:lavaan-class]{lavaan} (from \pkg{lavaan}).}
+#'   \item{\code{grm.par}}{A data frame containing graded response parameters.}
 #' }
 #'
 #' @details This conducts GRM. The second element of the return indicates
@@ -96,9 +96,9 @@ runGRM <- function(dat, lav.syntax, estimator) {
 #' @param dat a data frame containing graded response data
 #' @param nfac a numeric indicating the number of factors
 #'
-#' @return a string indicating \code{\link{lavaan}} syntax.
+#' @return a string indicating \code{\link[lavaan]{lavaan}} syntax.
 #'
-#' @details This generates \code{\link{lavaan}}  syntax
+#' @details This generates \code{\link[lavaan]{lavaan}}  syntax
 #'
 #' @export genLavSyn
 genLavSyn <- function(dat, nfac=1) {
